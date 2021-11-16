@@ -72,6 +72,7 @@ def read_k_shortest_paths(
         return Response(
             status_code=400, content="Origin or destination outside of Cape Town"
         )
+        
     k_shortest_paths = find_route_functions.k_shortest_paths(
         orig_lat=origin_lat,
         orig_lng=origin_lng,
