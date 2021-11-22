@@ -135,4 +135,13 @@ def read_shortest_route(
 ```
 
 ### K Shortest Routes
+This works the same as read_shortest_route but takes an additional parameter k. 
+Look into the [server.py](server.py) to see how it works. 
+
+## Running the example
+
+1. Create and activate your virtual environment
+2. Run ```pip install -r requirements.txt```
+3. Run ```uvicorn server:app``` to start the server.
+4. Wait for server to start then browse the opened server address e.g ```http://127.0.0.1:8000/docs/``` to test the server using Swagger UI.
 
