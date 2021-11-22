@@ -29,7 +29,7 @@ def read_root():
 
 @app.get("/graph_bounds")
 def read_graph():
-    return Feature(**graph_bounds.__geo_interface__)
+    return graph_bounds.__geo_interface__
 
 
 @app.get("/shortest_route")
@@ -57,7 +57,7 @@ def read_shortest_route(
     return linestring_to_feature(shortest_path)
 
 
-@app.post("/k_shortest_paths")
+@app.get("/k_shortest_paths")
 def read_k_shortest_paths(
     origin_lat: float,
     origin_lng: float,

@@ -11,6 +11,10 @@ def nodes_to_linestring(path, graph):
     return coords_list
 
 def shortest_path(orig_lat, orig_lng, dest_lat, dest_lng, graph) -> List[LatLng]:
+    """
+    Takes in a origin and destination(latitude, longitude), the graph and returns the shortest path between two points.
+    The path is returned as a list of LatLng objects.
+    """
     orig_node = ox.nearest_nodes(graph, Y=orig_lat, X=orig_lng)
     dest_node = ox.nearest_nodes(graph, Y=dest_lat, X=dest_lng)
 
@@ -20,6 +24,10 @@ def shortest_path(orig_lat, orig_lng, dest_lat, dest_lng, graph) -> List[LatLng]
     return route
 
 def k_shortest_paths(orig_lat, orig_lng, dest_lat, dest_lng, graph, k) -> List[List[LatLng]]:
+    """
+    Takes in a origin and destination(latitude, longitude), the graph together with k which is the number of routes you want calculated, and returns the k shortest paths between two points.
+    The paths are returned as a list of lists of LatLng objects.
+    """
     orig_node = ox.nearest_nodes(graph, Y=orig_lat, X=orig_lng)
     dest_node = ox.nearest_nodes(graph, Y=dest_lat, X=dest_lng)
 
